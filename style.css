@@ -1,0 +1,549 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    background: url('images/pattern.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+.no{
+    background: #fff;
+}
+
+
+@media screen and (min-width:780px) {
+    /*Navbar-Start*/
+    .openbtn{
+        visibility: hidden;
+    }
+    nav {
+        position: fixed;
+        top: 0px;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        padding: 10px 3% 10px 3%;
+        box-sizing: border-box;
+        z-index: 1000;
+        transition: .5s;
+    }
+
+    nav.black {
+        background-color: #FFFFFF;
+        height: 70px;
+        padding: 10px 1%;
+
+    }
+    nav .crossbtn{
+        display: none;
+    }
+    nav .navlogo a{
+        float: left;
+    }
+    nav .navlogo a:hover{
+        text-decoration: none;
+    }
+
+    nav ul {
+        float: right;
+        padding: 0;
+        display: flex;
+    }
+
+    nav ul li {
+        list-style-type: none;
+        margin: 0px 5px 0px 0px;
+    }
+
+    nav ul li a {
+        line-height: 60px;
+        position: relative;
+        color: white;
+        padding: 5px 20px;
+        font-family: 'Roboto', sans-serif;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 17px;
+    }
+    nav ul li a::before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 18px;
+        width: 80%;
+        height: 2px;
+        background: #88958d;
+        z-index: -1;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: .5s;
+    }
+
+    nav.black ul li a {
+        color: black;
+        line-height: 60px;
+    }
+    nav.black ul li a.active,
+    nav.black ul li a:hover{
+        color: black;
+        line-height: 60px;
+    }
+
+    nav ul li a.active::before,
+    nav ul li a:hover::before {
+        transform: scaleX(1);
+    }
+
+    nav ul li a.active,
+    nav ul li a:hover {
+        text-decoration: none;
+        color: white;
+    }
+    /*Navbar-End*/
+    /*Header-content-CSS-Start*/
+    .heder-content{
+        position: absolute;
+        top: 27%;
+        right: 2%;
+        left: 48%;
+        transform: translate(0, -50%);
+        z-index: 1;
+    }
+    /*Header-content-CSS-End*/
+}
+
+
+
+@media screen and (max-width:779px) {
+    /*MD-Navbar-Start*/    
+    .openbtn{
+        visibility: visible;
+        position: fixed;
+        width: 100%;
+        height: 50px;
+        padding: 4px 8px;
+        background:#000;
+        box-sizing: border-box;
+        cursor: pointer;
+        z-index: 10000;
+        
+    }
+    .openbtn span{
+        width: 45px;
+        height: 6px;
+        display: block;
+        background: #fff;
+        margin: 6px 0;
+        transition: .5s;
+    }
+    .openbtn.cross span{
+        position: absolute;
+        width: calc(50px - 16px);
+        top: calc(50% - 8px);
+    }
+    .openbtn.cross span:nth-child(1){
+        transform: rotate(45deg);
+    }
+    .openbtn.cross span:nth-child(3){
+        transform: rotate(-45deg);
+    }
+    .openbtn.cross span:nth-child(2){
+        display: none;
+    }
+    .menu{
+        height: 100vh;
+        background: black;
+        width: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        z-index: 1000;
+        transition: .5s
+    }
+    .menu.cross{
+        width: 200px;
+    }
+    .menu ul{
+        padding-top: 100px;
+    }
+    .menu ul li{
+        list-style: none;
+        padding: 20px 0px;
+    }
+    .menu ul li a{
+        padding: 20px 30px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .menu ul li a:hover{
+        border-radius: 20px;
+        color: black;
+        background: whitesmoke;
+        transition: .5s;
+    }
+    /*MD-Navbar-End*/
+    /*Header-content-CSS-Start*/
+    .heder-content{
+        position: absolute;
+        top: 50%;
+        right: 2%;
+        left: 10%;
+        transform: translate(0, -50%);
+        z-index: 1;
+    }
+    /*Header-content-CSS-End*/
+}
+/*Home Page Start*/
+/*Header-CSS-Start*/
+    header{
+    background: url('images/calendar3.jpg') no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    height: 100vh;
+    }
+ /*Header-CSS-End*/
+
+/*Change in Section h1 and p*/
+section h1{
+    font-family: helvita;
+}
+section p{
+    font-family: arial;
+    font-size: 17px;
+}
+/*Change in Section h1 and p*/
+/*Product Section Start*/
+.header{
+  background: url('images/Desk_Calendar-01.jpg')no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+  height: 100vh;
+  width: 100%;
+}
+.header .cont{
+  background: linear-gradient(130deg, #a2a2a2 80%, #555 20%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  width: 100%;
+}
+.carousel {
+    margin: 0 auto;
+    height: 400px;
+    display: relative;
+}
+.carousel img {
+    display: hidden; /* hide images until carousel prepares them */
+    cursor: pointer; /* not needed if you wrap carousel items in links */
+    width: 400px;
+    height: 300px;
+    border-radius: 20%; 
+}
+/*Product Section End*/
+
+/*New Designs Section Start*/
+.anchor{
+    text-decoration: none;
+}
+.anchor:hover{
+    text-decoration: none;
+}
+.pimg{
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.pimg:hover{
+    background: rgba(9, 0, 0, 0.6);
+    border: 4px solid rgba(0, 0, 0, .7);
+    transition: .5s;
+}
+.pimg h1{
+    padding: 100px 20px 0 20px;
+    visibility: hidden;
+}
+.pimg p{
+    padding: 0px 20px 0 20px;
+    visibility: hidden;
+}
+.pimg:hover h1, .pimg:hover p{
+    visibility: visible;
+}
+.piimg1{
+    height: 350px;
+    width: 400px;
+    background: url('images/pro3.jpg');
+    background-size: 100% 100%;
+    background-position: center center;
+    border-radius: 15px;
+    transition: .5s all ease;
+}
+.piimg1:hover{
+    background-size: 110% 110%;
+    background-position: center center;
+    transition: .5s all ease;
+}
+.piimg2{
+    height: 350px;
+    width: 400px;
+    background: url('images/pro1.jpg');
+    background-size: 100% 100%;
+    background-position: center center;
+    border-radius: 15px;
+    transition: .5s all ease;
+}
+.piimg2:hover{
+    background-size: 110% 110%;
+    background-position: center center;
+    transition: .5s all ease;
+}
+.piimg3{
+    height: 350px;
+    width: 400px;
+    background: url('images/pro2.jpg');
+    background-size: 100% 100%;
+    background-position: center center;
+    border-radius: 15px;
+    transition: .5s all ease;
+}
+.piimg3:hover{
+    background-size: 110% 110%;
+    background-position: center center;
+    transition: .5s all ease;
+}
+/*New Designs Section End*/
+/*Splendid Feature Section start*/
+.feature{
+  background: url('images/psliderbg.jpg') no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+  background-attachment: fixed;
+
+}
+.overlay{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+/*Splendid Feature Section End*/
+/*Home Page End*/
+
+/*Product Page Start*/
+/*Slider Start*/
+    .slider{
+      width: 900px;
+      height: 70vh;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .slides{
+      display: block;
+      width: 8000px;
+      height: 70vh;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .slides{
+      float: left;
+      height: 70vh;
+      width: 900px;
+    }
+
+/*Slider Start*/
+/*Card Start*/
+.card {
+  width: 300px;
+  border-radius: 25px;
+  box-shadow: -11px 11px 1px rgba(0, 0, 0, 0.3);
+}
+
+.card-head {
+  position: relative;
+  height: 270px;
+  border-radius: 25px 25px 0 0;
+}
+.card-head .hove{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 25px 25px 0 0;
+  z-index: 100;
+}
+.card-head a{
+  visibility: hidden;
+  position: absolute;
+  font-size: 20px;
+  top: 90%;
+  left: 20%;
+  transform: translate(-20%, -90%);
+  z-index: 100;
+  opacity: 1;
+}
+.card-head:hover .hove{
+  visibility: visible;
+  background: -moz-linear-gradient(-45deg, #000000 8%, #29BFC8 82%);
+  background: -webkit-linear-gradient(-45deg, #000000 8%, #29BFC8 82%);
+  background: linear-gradient(135deg, #000000 8%, #29BFC8 82%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#29BFC8', GradientType=1);
+  opacity: 0.7;
+  transition: 1s all ease-out;
+}
+.card-head:hover a{
+  visibility: visible;
+  transition: 1s all ease-out;
+}
+.card-logo {
+  width: 55px;
+  margin: 20px;
+}
+
+.product-img {
+  position: absolute;
+  top: 70px;
+  left: 10px;
+  z-index: 2;
+}
+
+.product-detail {
+  padding: 0 10px;
+  font-size: 11px;
+  color: #000;
+}
+
+.product-detail h2 {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.back-text {
+  display: inline-block;
+  font-size: 125px;
+  font-weight: 900;
+  margin-left: -7px;
+  margin-top: -12px;
+  color: #000;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.card-body {
+  height: 110px;
+  border-radius: 0 0 25px 25px;
+  background: -moz-linear-gradient(-45deg, #000000 8%, #29BFC8 82%);
+  background: -webkit-linear-gradient(-45deg, #000000 8%, #29BFC8 82%);
+  background: linear-gradient(135deg, #000000 8%, #29BFC8 82%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#29BFC8', GradientType=1);
+}
+
+.product-title {
+  padding: 0px 20px 5px 10px;
+  display: block;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.product-title b {
+  font-weight: 900;
+  letter-spacing: 0px;
+}
+
+.badge {
+  position: relative;
+  font-size: 10px;
+  font-weight: 300;
+  color: #fff;
+  background: #11e95b;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -2px;
+  margin-left: 5px;
+}
+
+.product-caption {
+  display: block;
+  padding: 0 10px;
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.product-rating {
+  padding: 0 20px;
+  font-size: 11px;
+}
+
+.product-rating i.grey {
+  color: #acacab;
+}
+.product-price {
+  position: absolute;
+  background: #11e95b;
+  padding: 7px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 200;
+  color: #fff;
+  border-radius: 7px;
+  top: 92%;
+  left: 75%;
+  transform: translate(-50%, -70%);
+  box-shadow: -10px 20px 15px -10px rgba(17, 233, 91, 0.3);
+}
+
+.product-price b {
+  margin-left: 5px;
+}
+/*Card End*/
+.nav-link{
+  font-size: 20px;
+  font-weight: 600;
+  font-style: italic;
+  font-family: arial;
+  margin: 10px 0px 10px 30px;
+}
+.nav-link:hover{
+  background: rgba(0, 0, 0, 1.0);
+  color: white;
+  transition: .5s;
+}
+/*product-page-End*/
+/*pricelist-start*/
+.formtext{color:#FFF;}
+.formtext1{color:#FFF; text-align:center;}
+.condiv{margin-top:160px;}
+/*pricelist-End*/
+footer{
+  background: #222;
+}
+hr{
+  background: white;
+}
+footer h1{
+  font-family: helvita;
+}
+footer .nav-link{
+  margin: 0;
+}
+footer i{
+  font-size: 50px;
+  color: white;
+}
+footer h5 i{
+  font-size: 25px;
+  color: white;
+  font-family: helvita;
+}
